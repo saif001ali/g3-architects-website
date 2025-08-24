@@ -5,4 +5,96 @@
     font-optical-sizing: auto;
     font-weight: 400; /* we can add the regular font-weight here. thats By default */
     font-style: normal;
-  }
+}
+
+/* Shared Styles -------------------------------*/
+
+.display-flex {
+    display: flex;
+}
+
+.bg-primary {
+    background-color: rgba(255, 144, 14, 0.1);
+}
+
+.btn-orange {
+    background-color: #FF900E;
+    color: white;
+    font-size: 1.25rem;
+    padding: 20px 25px;
+    border-radius: 8px;
+    border: none;
+}
+
+.text-dark-1 {
+    color: rgba(19, 19, 19, 1);
+    font-size: 2.8rem;
+}
+
+.text-dark-2 {
+    color: rgba(66, 66, 66, 1);
+    font-size: 1.2rem;
+}
+
+.text-dark-3 {
+    color: rgba(114, 114, 114, 1); /* To use HEX put # then color code */
+    font-size: 1rem;
+}
+
+/* Navbar styles -------------------------------*/
+
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Most browsers give <header> a default display: block and make it stretch the full width of its parent container. If you apply margin: 0 auto; without setting a specific width, it won’t center anything, because there's no space left to create "auto" margins. */
+/* Thats why applying MARGIN:0 auto; to the child of <header> separately is better */
+
+.navbar , .banner {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+
+}
+
+/* Banner styles ---------------------------------*/
+
+.banner-title {
+    color: rgba(19, 19, 19, 1);
+    font-size: 4rem;
+}
+
+.banner-content {
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner img {
+    width: 100%; /* Makes the image responsive by letting it take the 100% width space of your parent .banner */
+}
+
+/* MediaQuery for header =========================== */
+
+@media screen and (max-width:576px) {
+    .navbar , .nav-link {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:577px) and (max-width:992px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+/* footer styles */
