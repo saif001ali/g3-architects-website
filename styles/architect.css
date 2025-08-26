@@ -39,7 +39,21 @@
 .text-dark-3 {
     color: rgba(114, 114, 114, 1); /* To use HEX put # then color code */
     font-size: 1rem;
+    line-height: 1.6rem;
 }
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main > section {
+    margin-top: 110px;
+}
+
+.gap-30px {
+    margin-bottom: 30px;
+} 
 
 /* Navbar styles -------------------------------*/
 
@@ -48,7 +62,7 @@
     align-items: center;
 }
 
-/* Most browsers give <header> a default display: block and make it stretch the full width of its parent container. If you apply margin: 0 auto; without setting a specific width, it won’t center anything, because there's no space left to create "auto" margins. */
+/* Most browsers give <header> a default display: block; and make it stretch the full width of its parent container. If you apply margin: 0 auto; without setting a specific width, it won’t center anything, because there's no space left to create "auto" margins. */
 /* Thats why applying MARGIN:0 auto; to the child of <header> separately is better */
 
 .navbar , .banner {
@@ -80,21 +94,87 @@
     margin-bottom: 50px;
 }
 
-.banner img {
+.width-100 {
     width: 100%; /* Makes the image responsive by letting it take the 100% width space of your parent .banner */
+}
+
+/* Teams and Features Styles------------------------- */
+.team-image {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 24px;
+}
+/* Since teams display is flex, if we change align-items here then all child will be vertically aligned */
+.teams { 
+    align-items: center;
+}
+
+.features-content {
+    max-width: 530px;
+    margin-left: 75px;
+}
+
+.quick-list {
+    color: rgba(114, 114, 114, 1);
+    font-size: 2.8rem;
+}
+
+.features {
+    color: #FF900E;
+    font-size: 2.8rem;
+}
+/* Cards Style------------------------------- */
+.feature-card {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+}
+
+.card {
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-number {
+    color: rgba(66, 66, 66, 1);
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.card-name {
+    color: rgba(114, 114, 114, 1);
+    font-size: 1.25rem;
 }
 
 /* MediaQuery for header =========================== */
 
 @media screen and (max-width:576px) {
-    .navbar , .nav-link {
+    .navbar , .nav-link , .teams{
         flex-direction: column;
+    }
+    .feature-card , .team-image{
+        grid-template-columns: 1fr;
+    }
+    .feature-card {
+        justify-items: center;
+        /* Or */
+        /* If the container takes full width then you can use below lines to make it center */
+        /* width: fit-content;
+        margin: 0 auto; */
+        gap: 24px;
     }
 }
 
 @media screen and (min-width:577px) and (max-width:992px) {
-    .navbar {
+    .navbar , .teams{
         flex-direction: column;
+    }
+    .feature-card {
+        grid-template-columns: repeat(2 , 1fr);
     }
 }
 /* footer styles */
