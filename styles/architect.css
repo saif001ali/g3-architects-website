@@ -123,7 +123,7 @@ main > section {
     color: #FF900E;
     font-size: 2.8rem;
 }
-/* Cards Style------------------------------- */
+/* Facts and Cards Style------------------------------- */
 .feature-card {
     display: grid;
     grid-template-columns: repeat(4 , 1fr);
@@ -158,7 +158,8 @@ main > section {
 
 .sponsor-logos {
     display: grid;
-    grid-template-columns: repeat(5 , 1fr);
+    grid-template-columns: repeat(3 , 1fr);
+    justify-items: center;
     gap: 150px;
 }
 
@@ -189,8 +190,14 @@ main > section {
     .navbar , .teams{
         flex-direction: column;
     }
+    .facts h1 , p {
+        text-align: center;
+    }
     .feature-card , .sponsor-logos {
         grid-template-columns: repeat(2 , 1fr);
+    }
+    .feature-card {
+        justify-items: center;
     }
 }
 /* footer styles */
