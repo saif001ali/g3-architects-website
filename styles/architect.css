@@ -149,6 +149,22 @@ main > section {
     color: rgba(114, 114, 114, 1);
     font-size: 1.25rem;
 }
+/* Sponsors Style--------------------------------- */
+.sponsor-content {
+    max-width: 550px;
+    margin: 50px auto; /* margin: 0 auto; wont work alone without max-width of that content. */
+    text-align: center;
+}
+
+.sponsor-logos {
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    gap: 150px;
+}
+
+.sponsor-logos img {
+    filter: grayscale(100%);
+}
 
 /* MediaQuery for header =========================== */
 
@@ -156,7 +172,7 @@ main > section {
     .navbar , .nav-link , .teams{
         flex-direction: column;
     }
-    .feature-card , .team-image{
+    .feature-card , .team-image, .sponsor-logos{
         grid-template-columns: 1fr;
     }
     .feature-card {
@@ -173,7 +189,7 @@ main > section {
     .navbar , .teams{
         flex-direction: column;
     }
-    .feature-card {
+    .feature-card , .sponsor-logos {
         grid-template-columns: repeat(2 , 1fr);
     }
 }
