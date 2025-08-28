@@ -42,7 +42,7 @@
     line-height: 1.6rem;
 }
 
-main {
+main , .navbar , .banner {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -65,10 +65,10 @@ main > section , footer {
 /* Most browsers give <header> a default display: block; and make it stretch the full width of its parent container. If you apply margin: 0 auto; without setting a specific width, it won’t center anything, because there's no space left to create "auto" margins. */
 /* Thats why applying MARGIN:0 auto; to the child of <header> separately is better */
 
-.navbar , .banner{
+/* .navbar , .banner{
     max-width: 1440px;
     margin: 0 auto;
-}
+} */
 
 .nav-item {
     list-style: none;
@@ -213,9 +213,9 @@ main > section , footer {
 
 .sponsor-logos {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
-    justify-items: center;
-    gap: 150px;
+    grid-template-columns: repeat(5 , 1fr);
+    /* justify-items: center;
+    gap: 150px; */
 }
 
 .sponsor-logos img {
@@ -246,6 +246,14 @@ main > section , footer {
     .fact-card , .team-image, .sponsor-logos{
         grid-template-columns: 1fr;
     }
+    /* Feature-btn-container Explore More Horizontally center------------ */
+    .features-content {
+        margin: 10px;
+    }
+    .btn-container {
+        width: fit-content;
+        margin: 0 auto;
+    }
     .fact-card {
         justify-items: center;
         /* Or */
@@ -255,8 +263,11 @@ main > section , footer {
         gap: 24px;
     }
     #feature-btn {
-        margin-left: 20px;
-        margin-top: 20px;
+        display: block;
+        margin: 20px auto;
+    }
+    .sponsor-logos {
+        justify-items: center;
     }
 }
 
@@ -270,11 +281,21 @@ main > section , footer {
     .fact-card , .sponsor-logos {
         grid-template-columns: repeat(2 , 1fr);
     }
-    .fact-card {
+    .fact-card , .sponsor-logos {
         justify-items: center;
     }
+    .features-content h3{
+       text-align: center;
+    }
     #feature-btn {
-        margin-left: 20px;
-        margin-top: 20px;
+        margin: 0px;
+    }
+    .btn-container {
+        width: fit-content; /* width can be either fit-content or equal to button-width */ 
+        margin: 0 auto;
+    }
+    .feature-section {
+        /* feature-section width was declared before, thats why not needed here */ 
+        margin: 0 auto;
     }
 }
